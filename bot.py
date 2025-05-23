@@ -2,6 +2,8 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart, Command
 from aiogram.types import (KeyboardButton, Message, ReplyKeyboardMarkup, ReplyKeyboardRemove)
 from config import Config, load_config
+import os
+print(f"Current working directory: {os.getcwd()}")
 config: Config = load_config()
 BOT_TOKEN: str = config.tg_bot.token
 bot = Bot(BOT_TOKEN)
