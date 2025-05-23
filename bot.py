@@ -29,7 +29,7 @@ button_16 = KeyboardButton(text='Отлично')
 keyboard_4 = ReplyKeyboardMarkup(keyboard=[[button_12], [button_13], [button_14], [button_15], [button_16]], resize_keyboard=False)
 button_17 = KeyboardButton(text='Нет')
 button_18 = KeyboardButton(text='Менее 30 минут')
-button_19 = KeyboardButton(text='От 30 минут до 1 часа')
+button_19 = KeyboardButton(text='От 30 минут до 1 часа.')
 button_20 = KeyboardButton(text='От 1 часа до 2 часов')
 button_21 = KeyboardButton(text='Более 2 часов')
 keyboard_5 = ReplyKeyboardMarkup(keyboard=[[button_17], [button_18], [button_19], [button_20], [button_21]], resize_keyboard=False)
@@ -185,7 +185,7 @@ async def process_phys_answer(message: Message):
         reply_markup=keyboard_6
     )
     users[message.from_user.id]['physical'] = 2
-@dp.message(F.text == 'От 30 минут до 1 часа')
+@dp.message(F.text == 'От 30 минут до 1 часа.')
 async def process_phys_answer(message: Message):
     await message.answer(
         text='Вы курите:',
